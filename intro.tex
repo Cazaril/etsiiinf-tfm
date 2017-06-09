@@ -2,38 +2,146 @@
 \chapter{Introducción}
 \label{chap:introduccion}
 
-\drop{E}{sto} se llama «letra capital» y debería utilizarse únicamente al
-comienzo de capítulo como artificio decorativo. Para que resulte estéticamente
-adecuada, este primer párrafo debería tener más del doble de líneas de lo que
-ocupe verticalmente la letra capital (dos en este caso). El capítulo de
-introducción debe dar al lector una perspectiva básica ---pero completa--- del
-problema que se pretende abordar, pero también de la estrategia y enfoque que el
-autor propone para su resolución. El lector debería poder determinar si este
-documento le interesa leyendo únicamente la introducción.
+\drop{A} lo largo de las décadas, se han visto las distintas olas de la
+Inteligencia Artificial, sus consecuencias y los periodos intermedios conocidos
+como inviernos. Existe un punto de similitud entre las distintas olas: Se
+prometieron soluciones y avances que nunca llegaron y se menospreció la
+dificultad computacional de los problemas. En el contexto actual en el cual se
+ha vuelto a hablar de la Inteligencia Artificial, es interesante comprobar
+exactamente la calidad de los avances del área y si se ha conseguido un avance
+cualitativo con respecto a las técnicas de hace 30 años.
+
+Siempre que se habla de la IA como área, existen dos grandes problemas:
+\begin{itemize}
+\item El efecto IA.Que resume la dificultad que existe cuando, al conseguir un
+  proceso conocido para un problema, dicho proceso pasa a no ser considerado
+  IA.Esto es, la misma comprensión de un algoritmo lo despoja de inteligencia
+  ya que se elimina ese halo de subjetividad humana que rodea al problema.
+\item Como resultado de la explosión de las distintas burbujas en los
+  sucesivos inviernos de la IA, se ha establecido una desconfianza hacia todo
+  lo relacionado con esta área y muchas de las salidas industriales han
+  cambiado de nombre para librarse de ese estigma.
+\end{itemize}
+  
+Estos problemas son solo la punta del iceberg, puesto que al ser un área
+multidisciplinar y de investigación, aúna las partes negativas de áreas con
+estas características – Necesidad de equipo con muy alta preparación, necesidad
+de inversión fuerte, baja tasa de retorno de la inversión, etc – haciéndola un
+objetivo de recortes inmediatos en tiempos de escasez económica.
+
+Si podemos dividir el campo de la IA en sus tres pilares históricos fundamentales:
+\begin{itemize}
+\item Aprendizaje y razonamiento artificial.
+\item Robótica.
+\item Procesamiento del lenguaje natural.
+\end{itemize}
+
+Como es comprensible, la amplitud de un análisis que abarque por completo este
+área resulta inviable tanto por extensidad como por alcance del presente
+trabajo. Nos centraremos en el mismo en sólo dos de estos pilares: En el
+Aprendizaje y razonamiento artificial y en el procesamiento del lenguaje natural
+aunque es de rigor comentar la grandísima evolución ocurrida en el campo de la
+robótica, aumentando las capacidades de acción y reacción de los distintos
+componentes, dotándolos además de mejores sistemas motrices y mejor capacidad
+propioceptiva.
+
+Es interesante avanzar el problema de la explosión combinatorial del cual
+hablaremos en profundidad más adelante. Los problemas a los que se suele
+enfrentar la IA suelen ser problemas cuyo comportamiento responde a esta
+explosión: El espacio de soluciones se hace cada vez más grande de forma
+exponencial con respecto al tamaño de la muestra.
+
+Este comportamiento hace difícil solucionar los problemas de forma clásica, es
+decir, buscando la mejor solución generando todas las posibles soluciones del
+problema. Es en este punto en el que entra la IA, proporcionando heurísticas –
+más adelante se hablará de ellas – que permitan ahorrarse al algoritmo de
+resolución la generación de soluciones no válidas. Dichas heurísticas suelen ser
+guías más o menos ingeniosas encontradas por un ser humano pero también pueden
+ser el fruto de un algoritmo de categorización automática, que de forma propia
+ha creado dichas guías. A pesar de que la IA suele ser la herramienta con la
+cual abordar este tipo de problemas, también ha sido necesario el desarrollo
+técnico de los ordenadores – potencia de cálculo, cantidad de memoria disponible
+– que permitiera a las distintas técnicas medirse con el problema a
+resolver. Pero si ha sido necesario ese salto en la capacidad de cómputo, es
+aceptable la duda de si dicha técnica es realmente una técnica válida.
+
+Con esta duda en mente, se pretende realizar un análisis exhaustivo de cada área
+a tratar, comentando los avances cualitativos o cunatitativos de cada
+investigación para después hacer una comparación real con los avances más
+recientes. Con esto se pretende hacer, además de un estado del arte, una
+revisión crítica de los distintos avances y de su impacto real.
+
+% REVISAR A PARTIR DE AQUÍ REVISAR
+
+% Otro problema interesante y distinto en cuanto a su enfoque inicial es el
+% problema de la traducción automática: Obtener traducciones válidas pero
+% generadas de forma automática por una máquina. Este problema existe desde hace
+% muchísimo tiempo y que conlleva una problemática importante; Desde la traducción
+% de conceptos propios de una lengua a la traducción de la semántica propia de la
+% oración o el problema de la contextualización de textos.
+
+% El tratamiento y estudio de este tipo de problemas ha requerido una cantidad de
+% recursos – generalmente prohibitivos –, haciendo complicado el avance en estas
+% áreas al ser más rápido y eficiente directamente utilizar personal humano para
+% resolver estos problemas. Más adelante veremos las distintas soluciones pasadas
+% y actuales utilizadas en esta área.
+
+% ¿Podemos entonces distinguir entre un algoritmo o proceso fruto de la
+% inteligencia y otro que se base en pura fuerza bruta y velocidad de cálculo?
+% ¿Son todos los avances en estas áreas igualmente importantes?
+
+% Las preguntas anteriores son preguntas válidas y son parte de la base que ha
+% motivado este trabajo.
+% Es necesario mirar de forma crítica los avances que se están produciendo para
+% comprobar la salud del área y, además, conseguir una perspectiva mejor de cara a
+% futuros trabajos de investigación. Para esto es necesario entender el estado del
+% arte y comparar los avances pasados con las bases de los avances actuales y
+% hacer una comparación exhaustiva entre estos.
+
+% Dada la amplitud del área y la profundidad de las distintas subareas dentro de
+% la misma y contando con la limitación que lleva aparejada un trabajo de este
+% tipo, no se profundizará por igual en las distintas áreas si no que se realizará
+% un estudio somero del campo en general para luego profundizar en algunas áreas
+% concretas, en las cuales se analizarán los avances pasados poniendo estos en
+% relación al estado del arte de la materia con el ánimo de comparar la amplitud,
+% alcance y estado del desarrollo actual.
+
+% Las áreas sobre las cuales se pretende hacer especial énfasis son el aprendizaje
+% profundo – Deep learning -, lingüística computacional o ingeniería lingüística,
+% Razonamiento de sentido común y, por último, los sistemas de ayuda a la
+% decisión.
+
+% El trabajo está estructurado de forma que primero se presentará el contexto
+% histórico de cada campo para luego, de forma ordenada, comparar ese contexto
+% histórico con sus avances y desarrollo con el estado del arte desarrollado.
+
+% Aunque las conclusiones que se extraigan estarán por fuerza limitadas al campo
+% de alcance de este trabajo, al ser campos reconocidos e importantes dentro del
+% área, no es descabellado extrapolar las conclusiones obtenidas al resto de
+% campos no tratados.
+
+% \section{Título del proyecto}
+
+% En la portada ---y otras páginas de presentación--- el nombre o título del
+% proyecto debe aparecer sin comillas, cursiva u otros formatos. Si se cita el
+% título de otra obra, o el nombre de un capítulo sí debe aparecer entre
+% comillas. Por cierto, las comillas que deben usarse en castellano son las
+% «latinas», dejando las ``inglesas'' para los raros casos en los que aparezca una
+% cita en el cuerpo otra~\cite{sousa}.
 
 
-\section{Título del proyecto}
+% \section{Estructura del documento}
 
-En la portada ---y otras páginas de presentación--- el nombre o título del
-proyecto debe aparecer sin comillas, cursiva u otros formatos. Si se cita el
-título de otra obra, o el nombre de un capítulo sí debe aparecer entre
-comillas. Por cierto, las comillas que deben usarse en castellano son las
-«latinas», dejando las ``inglesas'' para los raros casos en los que aparezca una
-cita en el cuerpo otra~\cite{sousa}.
+% Pueden incluirse aquí una sección con algunos consejos para la lectura del
+% documento dependiendo de la motivación o conocimientos del lector.  También
+% puede ser útil incluir una lista con el nombre y finalidad de cada uno de los
+% capítulos restantes.
 
-
-\section{Estructura del documento}
-
-Pueden incluirse aquí una sección con algunos consejos para la lectura del
-documento dependiendo de la motivación o conocimientos del lector.  También
-puede ser útil incluir una lista con el nombre y finalidad de cada uno de los
-capítulos restantes.
-
-\begin{definitionlist}
-  \chapterTitle{objetivos}{Hola mundo}
-  \chapterTitle{antecedentes}{Hola mundo}
-  %\chapterTitle{desarrollo}{Hola mundo}
-  %\chapterTitle{resultados}{Hola mundo}
-  %\chapterTitle{conclusiones}{Hola mundo}
-  %\chapterTitle{lineas-futuras}{Hola mundo}
-\end{definitionlist}
+% \begin{definitionlist}
+%   \chapterTitle{objetivos}{Hola mundo}
+%   \chapterTitle{antecedentes}{Hola mundo}
+%   \chapterTitle{desarrollo}{Hola mundo}
+%   \chapterTitle{resultados}{Hola mundo}
+%   \chapterTitle{conclusiones}{Hola mundo}
+%   \chapterTitle{lineas-futuras}{Hola mundo}
+% \end{definitionlist}

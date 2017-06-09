@@ -55,7 +55,7 @@
 % J. Martínez de Sousa. Ortografía y ortotipografía del español actual. Trea, 2008.
 
 %% -- MEDIDAS Y DISTANCIAS -----------------------------------------------------
-\usepackage[left=35mm, right=20mm, top=25mm, bottom=25mm]{geometry}
+\usepackage[left=40mm, right=20mm, top=35mm, bottom=35mm]{geometry}
 \usepackage{setspace}
 \setlength{\parskip}{2mm plus 0.2mm minus 0.2mm}
 
@@ -650,10 +650,10 @@ safeinputenc
   }
 
 
-\AfterBegin{%
-  % separación entre filas en los cuadros
-  \setlength{\extrarowheight}{1pt}
-}
+% \AfterBegin{%
+%   % separación entre filas en los cuadros
+%   \setlength{\extrarowheight}{1pt}
+% }
 
 
 %% -- Algunos comandos útiles
