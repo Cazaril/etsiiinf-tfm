@@ -20,15 +20,134 @@ en la cual, además de un diccionario bilingüe, se dividía el trabajo en fases
 repartidas entre traductores humanos nativos -tanto del lenguaje origen como del
 lenguaje objetivo- y una fase intermedia de traducción automática.
 
-Aunque estas propuestas tardarían decadas en ser conocidas pero resultan una
+Aunque estas propuestas tardarían decadas en ser conocidas, resultan una
 primera aproximación a un problema que, como veremos en las siguientes páginas,
 no resulta en absoluto trivial.
 
 \subsection{Problemática de la traducción}
+En general, pocos de los problemas que veremos a continuación han sido resueltos
+de forma plenamente satisfactoria si no que se ha llegado a un punto de
+equilibrio en cuanto a coste/beneficio.
+
+\begin{itemize}
+\item Problema del contexto. En una frase, entender y traducir el contexto
+  no siempre resulta inmediato. La poesía, la ironía y, en general, cualquier
+  herramienta lingüistica compleja da lugar a la interpretación subjetiva del
+  interlocutor lo cual hace que en ocasiones, incluso los propios expertos
+  humanos, traduzcan de forma errónea frases dándoles un sentido que antes
+  podían no poseer.
+\item Peculiaridades idiomáticas. En todas las lenguas existen conceptos o
+  términos que, por su alcance o su peculiaridad, resultan de dificil si no
+  imposible traducción. Un ejemplo de esto puede ser `Toska' en Ruso o
+  `Saudade' en Portugués, ambos siendo términos de difícil traducción
+  directa a otra lengua.
+\item La traducción múltiple. Entendiendo como la traducción como el
+  ejercicio de transformar elementos de un lenguaje en elementos de otro
+  lenguaje, es importante remarcar que, si partimos de un método de
+  transformación -Un método de traducir- propenso a errores y a pérdidas de
+  contenido lingüistico, la traducción de contenido a partir de otra
+  traducción previa y no a partir del texto original hace que la acumulación
+  de errores resulte en un efecto parecido al que se podría obtener mediante
+  el juego `El telefono estropeado'.
+\item Bancos de términos. En cualquier labor de traducción automática, es de
+  máxima importancia tener bases de datos donde estén almacenados con el máximo
+  nivel de detalle los diferentes términos del idioma; Sin este requisito, es
+  inviable abordar cualquier tarea de traducción haciendo la labor de la
+  traducción automática intensiva desde un punto de vista computacional o de
+  capacidad de memoria.
+\item Construcción de bancos de términos. Relacionado con el problema anterior
+  existe la dificultad de la construcción de dichos bancos y, aún más
+  importante, su mantenimiento y actualización: No podemos olvidar que una
+  lengua natural es una herramienta viva, flexible y con significados subjetivos
+  muy localizados geográficamente haciendo el mantenimiento de ese banco aún más
+  complejo si cabe.
+\end{itemize}
+Toda esta problemática se traduce en un hecho concreto:
+No existe la traducción automática perfecta; Mejor dicho, para textos cuya complejidad
+sobrepase a la de un texto de índole infantil, no existe un método sistemático que garantice
+una traducción automática sin pérdida de información.
+
+Diversos métodos se han inventado para evitar estos problemas así como otros que
+surgieron a raiz de dichos métodos, pero el problema de la traducción automática
+-En todas sus implicaciones: Minería de textos, Recuperación de información,
+Extracción de la información, etc \ldots- sigue siendo uno de los grandes
+problemas del siglo y, en opinión del autor, el problema que más duro de
+resolver resultará a lo largo del siglo XXI.
 
 \section{Aprendizaje y Razonamiento artificial}
 
+Este es un campo con multitud de derivaciones y subáreas, cada una con sus
+particularidades y desarrollos independientes.
 
+La idea de crear objetos con raciocinio propio y los autómatas ya
+formaban parte del imaginario común desde la antiguedad, pero será necesario
+esperar hasta el siglo XX para encontrar ejemplos concretos y específicos sólo
+atribuibles al campo de la Inteligencia Artificial.
+
+Antes de poder comentar las distintas problemáticas de estas areas, es necesario
+dar unas pinceladas de contexto y comentar ciertos conceptos concretos del
+presente trabajo.
+Tradicionalmente, la Inteligencia Artificial ha buscado la
+manera de replicar el mundo natural construyendo modelos artificiales que fuesen
+indistinguibles -interior y exteriormente- a los originales: Asumimos que el ser
+humano es el ser vivo más inteligente y por tanto se busca replicar en la medida
+de lo posible aquello que lo distingue del resto de seres vivos -su cerebro- de
+la misma manera de asumimos el modelo de cámara estenopeica como una versión
+primitiva y limitada del ojo humano, pero similar en su funcionamiento
+fundamental. Esta búsqueca constante de una mejor aproximación ha mantenido
+siempre vivo el campo y lo ha hecho ser, en general, un área multidisciplinar
+pero también puede haber limitado el desarrollo, obligándolo a continuar una
+línea de investigación sobreexplotada.
+
+Siguiendo la analogía de considerar al ser humano como el modelo de inteligencia
+a reproducir, consideremos el problema del ajedrez: si entendemos un estado como
+la distribución específica de las piezas a lo largo del tablero en un momento
+concreto de la partida, es imposible que un ser humano memorice todos los
+estados posibles de una partida para, en función del estado actual, encontrar el
+estado que mejore su situación lo máximo posible. ¿Cómo resolvemos entonces ese
+tipo de problemas los humanos? 
+
+\subsection{Inteligencia artificial}
+Siempre hemos entendido la IA como el trabajo a través del cual dotar a máquinas
+o métodos automáticos de la capacidad de tomar decisiones o actuar de formas que
+habitualmente se atribuyen a la inteligencia.
+Pero ¿Qué podemos entender hoy en día cuando decimos `Inteligencia Artificial`?
+¿Seguimos teniendo la misma intuición de inteligencia que teníamos hace 30 años?
+Históricamente, la IA ha ido de la mano del desarrollo de `Heurísticas', es
+decir, reglas más o menos ad-hoc que tienen la particularidad de acertar mucho y
+fallar poco. Dichas heurísticas son fruto del descubrimiento o desarrollo de un
+agente humano, que previamente ha obtenido esa regla o conjunto de ellas a
+través de la experiencia; Una heurística, al final, es una guía fruto de la
+experiencia que apunta en la dirección de una posible solución basada en un
+conocimiento obtenido ad-hoc.
+
+Obviamente, no todos los problemas admiten de la misma forma una heurística ni
+existe una única heurística que permita resolver de forma satisfactoria todos
+los problemas, de la misma forma que no existe una única forma de actuar que
+nos permita enfrentarnos a todas las situaciones. Pero esta aproximación tiene
+la problemática del coste y de necesitar a uno o más expertos en el problema con
+la suficiente experiencia como para haber interiorizado una forma de ataque;
+El estudio matemático del problema se utiliza para dotar de coherencia
+los resultados así como resolver los casos en los que la heurística falle,
+proporcionando reglas formales que permitan atacar al problema con una cierta
+garantía de seguridad.
+
+Si estudiáramos la evolución de este área, dividir el desarrollo de la IA en 3
+grandes olas -actualmente estamos en la cresta de la tercera- con sus
+respectivas caídas de interés y popularidad. A lo largo de dichas olas se ha
+producido un cambio en la popularidad de ciertas tecnologías, aumentando
+aquellas que previamente habían sido rechazadas o no gozaban de popularidad y
+disminuyendo aquellas para las cuales se habían hecho demasiadas promesas.
+
+
+
+Orígenes de las redes de neuronas.
+
+Orígenes del Big Data. Qué es?
+
+Qué entendemos por razonamiento inteligente.
+
+Problemática concreta del área.
 % Este capítulo incluye unas nociones básicas de \LaTeX{} y algunos consejos
 % sencillos de composición para sacar todo el jugo a la clase \packageName. Ten
 % presente que este capítulo está pensado para que leas el código fuente y lo
